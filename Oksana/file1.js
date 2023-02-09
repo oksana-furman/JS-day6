@@ -101,3 +101,78 @@ for (let val in allEmployees) {
 //end of intermediate exercise
 
 //advanced exercise
+let books = `[{
+    "title": "American Gods",
+    "author": "Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1462924585i/30165203.jpg",
+    "link": "https://www.goodreads.com/book/show/30165203-american-gods",
+    "read": "true"}, {
+        "title": "Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch",
+    "author": "Terry Pratchett, Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615552073i/12067.jpg",
+    "link": "https://www.goodreads.com/book/show/12067.Good_Omens?from_search=true&from_srp=true&qid=54xZXmU390&rank=1",
+    "read": "true"}, {
+        "title": "Norse Mythology",
+    "author": "Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1516128292i/37903770.jpg",
+    "link": "https://www.goodreads.com/book/show/37903770-norse-mythology",
+    "read": "false"}, {
+        "title": "The Sandman Vol. 1: Preludes & Nocturnes",
+    "author": "Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1411609637i/23754.jpg",
+    "link": "https://www.goodreads.com/book/show/23754.The_Sandman_Vol_1",
+    "read": "true"}, {
+        "title": "Trigger Warning: Short Fictions and Disturbances",
+    "author": "Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415036119i/22522808.jpg",
+    "link": "https://www.goodreads.com/book/show/22522808-trigger-warning",
+    "read": "false"}, {
+        "title": "Stardust",
+    "author": "Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1459127484i/16793.jpg",
+    "link": "https://www.goodreads.com/book/show/16793.Stardust",
+    "read": "true"}, {
+        "title": "Neverwhere",
+    "author": "Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348747943i/14497.jpg",
+    "link": "https://www.goodreads.com/book/show/14497.Neverwhere",
+    "read": "true"}, {
+        "title": "Coraline",
+    "author": "Neil Gaiman",
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1493497435i/17061.jpg",
+    "link": "https://www.goodreads.com/book/show/17061.Coraline",
+    "read": "true"} 
+]`;
+let newBooks = JSON.parse(books);
+
+for (let val of newBooks) {
+    if (val.read == "true") {
+        document.getElementById("box").innerHTML += `
+    <div class="card" id="cardId" style="width: 17rem; height: 40rem; margin: 6px; background-color: white">
+        <img src="${val.cover}" class="card-img-top" style="height: 60%; width: 100%" alt="${val.title}">
+        <div class="card-body">
+            <h5 class="card-title">${val.title}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${val.author}</h6>
+            <a href="${val.link}" class="btn btn-success" target="blank">See more</a>
+        </div>
+    </div>
+`;
+    } else {
+        document.getElementById("box").innerHTML += `
+        <div class="card" id="cardId" style="width: 17rem; height: 40rem; margin: 6px; background-color: yellow">
+            <img src="${val.cover}" class="card-img-top" style="height: 70%; width: 100%" alt="${val.title}">
+            <div class="card-body">
+                <h5 class="card-title">${val.title}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${val.author}</h6>
+                <a href="${val.link}" class="btn btn-success" target="blank">See more</a>
+            </div>
+        </div>
+    `;
+    }
+
+
+}
+
+
+
+//end of advanced exercise
