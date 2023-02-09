@@ -176,15 +176,15 @@ for (let val of newBooks) {
     if (val.read == "true") {
         color = "white";
     } else {
-        color = "yellow";
+        color = "lightgrey";
     }
     document.getElementById("box").innerHTML += `
-    <div class="card" id="cardId" style="width: 17rem; height: 40rem; margin: 6px; background-color: ${color}">
+    <div class="card" id="cardId" style="width: 17rem; height: 40rem; margin: 6px; background-color: ${color}; border: 1px solid green">
         <img src="${val.cover}" class="card-img-top" style="height: 60%; width: 100%" alt="${val.title}">
         <div class="card-body">
             <h5 class="card-title">${val.title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${val.author}</h6>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#books${i}">See more</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#books${i}">See more</button>
         </div>
     </div>
 
