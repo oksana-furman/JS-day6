@@ -1,104 +1,104 @@
 //basic exercise
-var sandwiches = `{ "sandwich": "hamburger", "calories": "260" }`;
-var fries = `{ "fries_size": "Large French Fries", "calories": "570" }`;
-let newSandwich = JSON.parse(sandwiches);
-let newFries = JSON.parse(fries);
+// var sandwiches = `{ "sandwich": "hamburger", "calories": "260" }`;
+// var fries = `{ "fries_size": "Large French Fries", "calories": "570" }`;
+// let newSandwich = JSON.parse(sandwiches);
+// let newFries = JSON.parse(fries);
 
-console.log(newSandwich);
-console.log(newFries);
+// console.log(newSandwich);
+// console.log(newFries);
 
-document.getElementById("box1").innerHTML = `My favorite sandwich is a ${newSandwich.sandwich} which has approximately ${newSandwich.calories} calories, along with it I enjoy eating ${newFries.fries_size} which have about ${newFries.calories
-} calories.`;
+// document.getElementById("box1").innerHTML = `My favorite sandwich is a ${newSandwich.sandwich} which has approximately ${newSandwich.calories} calories, along with it I enjoy eating ${newFries.fries_size} which have about ${newFries.calories
+// } calories.`;
 //end of basic exercise
 
 //intermediate exercise
-let employees = `[{
-    "userId": "29893944817",
-    "jobTitleName" : "Developer",
-    "firstName": "Patrik",
-    "lastName": "Jonathan",
-    "emailAddress": "patrik.k.jonathan@gmail.com",
-    "salary": "3500"
-}, {
-    "userId": "29823964877" ,
-    "jobTitleName": "Analyst",
-    "firstName": "Tom",
-    "lastName": "Irani",
-    "emailAddress": "tomrirani@gmail.com",
-    "salary": "3600"
-}, {
-    "userId": "25833742117" ,
-    "jobTitleName": "Program Directory",
-    "firstName": "Tom",
-    "lastName": "Hanks",
-    "emailAddress": "tomhanks@gmail.com",
-    "salary": "3700"
-}, {
-    "userId": "29823964187" ,
-    "jobTitleName": "Developer",
-    "firstName": "Tom",
-    "lastName": "Jonathan",
-    "emailAddress": "tomjonahan@gmail.com",
-    "salary": "3100"
-}, {
-    "userId": "29823965397" ,
-    "jobTitleName": "Program Directory",
-    "firstName": "Jonathan",
-    "lastName": "Tomas",
-    "emailAddress": "jonathantomas@gmail.com",
-    "salary": "3000"
-}, {
-    "userId": "29823964807" ,
-    "jobTitleName": "Developer",
-    "firstName": "John",
-    "lastName": "Hill",
-    "emailAddress": "johnhill@gmail.com",
-    "salary": "2900"
-}, {
-    "userId": "29823964727" ,
-    "jobTitleName": "Analyst",
-    "firstName": "Tim",
-    "lastName": "Jonathan",
-    "emailAddress": "timjonathan@gmail.com",
-    "salary": "3500"
-}, {
-    "userId": "29823964855" ,
-    "jobTitleName": "Developer",
-    "firstName": "Tod",
-    "lastName": "Smith",
-    "emailAddress": "todsmith@gmail.com",
-    "salary": "3400"
-}, {
-    "userId": "29823964866" ,
-    "jobTitleName": "Program Directory",
-    "firstName": "Tom",
-    "lastName": "Smith",
-    "emailAddress": "tomsmith@gmail.com",
-    "salary": "3300"
-}, {
-    "userId": "29823964888" ,
-    "jobTitleName": "Developer",
-    "firstName": "Tomas",
-    "lastName": "Tomas",
-    "emailAddress": "tomastomas@gmail.com",
-    "salary": "3200"
-}]`;
+// let employees = `[{
+//     "userId": "29893944817",
+//     "jobTitleName" : "Developer",
+//     "firstName": "Patrik",
+//     "lastName": "Jonathan",
+//     "emailAddress": "patrik.k.jonathan@gmail.com",
+//     "salary": "3500"
+// }, {
+//     "userId": "29823964877" ,
+//     "jobTitleName": "Analyst",
+//     "firstName": "Tom",
+//     "lastName": "Irani",
+//     "emailAddress": "tomrirani@gmail.com",
+//     "salary": "3600"
+// }, {
+//     "userId": "25833742117" ,
+//     "jobTitleName": "Program Directory",
+//     "firstName": "Tom",
+//     "lastName": "Hanks",
+//     "emailAddress": "tomhanks@gmail.com",
+//     "salary": "3700"
+// }, {
+//     "userId": "29823964187" ,
+//     "jobTitleName": "Developer",
+//     "firstName": "Tom",
+//     "lastName": "Jonathan",
+//     "emailAddress": "tomjonahan@gmail.com",
+//     "salary": "3100"
+// }, {
+//     "userId": "29823965397" ,
+//     "jobTitleName": "Program Directory",
+//     "firstName": "Jonathan",
+//     "lastName": "Tomas",
+//     "emailAddress": "jonathantomas@gmail.com",
+//     "salary": "3000"
+// }, {
+//     "userId": "29823964807" ,
+//     "jobTitleName": "Developer",
+//     "firstName": "John",
+//     "lastName": "Hill",
+//     "emailAddress": "johnhill@gmail.com",
+//     "salary": "2900"
+// }, {
+//     "userId": "29823964727" ,
+//     "jobTitleName": "Analyst",
+//     "firstName": "Tim",
+//     "lastName": "Jonathan",
+//     "emailAddress": "timjonathan@gmail.com",
+//     "salary": "3500"
+// }, {
+//     "userId": "29823964855" ,
+//     "jobTitleName": "Developer",
+//     "firstName": "Tod",
+//     "lastName": "Smith",
+//     "emailAddress": "todsmith@gmail.com",
+//     "salary": "3400"
+// }, {
+//     "userId": "29823964866" ,
+//     "jobTitleName": "Program Directory",
+//     "firstName": "Tom",
+//     "lastName": "Smith",
+//     "emailAddress": "tomsmith@gmail.com",
+//     "salary": "3300"
+// }, {
+//     "userId": "29823964888" ,
+//     "jobTitleName": "Developer",
+//     "firstName": "Tomas",
+//     "lastName": "Tomas",
+//     "emailAddress": "tomastomas@gmail.com",
+//     "salary": "3200"
+// }]`;
 
-let allEmployees = JSON.parse(employees);
-console.log(allEmployees);
-for (let val in allEmployees) {
-    document.getElementById("tBody").innerHTML += `    
-            <tr>
-                <th scope="row">${Number(val)+1}</th>
-                <td>${allEmployees[val].userId}</td>
-                <td>${allEmployees[val].jobTitleName}</td>
-                <td>${allEmployees[val].firstName}</td>
-                <td>${allEmployees[val].lastName}</td>
-                <td>${allEmployees[val].emailAddress}</td>
-                <td>${allEmployees[val].salary}</td>
-            </tr>
-`;
-}
+// let allEmployees = JSON.parse(employees);
+// console.log(allEmployees);
+// for (let val in allEmployees) {
+//     document.getElementById("tBody").innerHTML += `    
+//             <tr>
+//                 <th scope="row">${Number(val)+1}</th>
+//                 <td>${allEmployees[val].userId}</td>
+//                 <td>${allEmployees[val].jobTitleName}</td>
+//                 <td>${allEmployees[val].firstName}</td>
+//                 <td>${allEmployees[val].lastName}</td>
+//                 <td>${allEmployees[val].emailAddress}</td>
+//                 <td>${allEmployees[val].salary}</td>
+//             </tr>
+// `;
+// }
 //end of intermediate exercise
 
 //advanced exercise
@@ -168,13 +168,18 @@ let books = `[{
     "pages": "176 pages",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt earum cupiditate corrupti necessitatibus iure tenetur eveniet itaque perspiciatis, eaque odit nihil fuga recusandae ad at omnis molestias a repellat voluptatum ullam repellendus! Id aliquid quod quibusdam blanditiis saepe sequi provident repellat laudantium aliquam beatae, voluptates architecto recusandae voluptatum vero tempore?"} 
 ]`;
-console.log("here: " + books.charAt(710));
+// console.log("here: " + books.charAt(710));
 let newBooks = JSON.parse(books);
 let i = 0;
 for (let val of newBooks) {
+    let color = "";
     if (val.read == "true") {
-        document.getElementById("box").innerHTML += `
-    <div class="card" id="cardId" style="width: 17rem; height: 40rem; margin: 6px; background-color: white">
+        color = "white";
+    } else {
+        color = "yellow";
+    }
+    document.getElementById("box").innerHTML += `
+    <div class="card" id="cardId" style="width: 17rem; height: 40rem; margin: 6px; background-color: ${color}">
         <img src="${val.cover}" class="card-img-top" style="height: 60%; width: 100%" alt="${val.title}">
         <div class="card-body">
             <h5 class="card-title">${val.title}</h5>
@@ -205,62 +210,5 @@ for (let val of newBooks) {
                 </div>
             </div>
 `;
-    } else {
-        document.getElementById("box").innerHTML += `
-        <div class="card" id="cardId" style="width: 17rem; height: 40rem; margin: 6px; background-color: yellow">
-            <img src="${val.cover}" class="card-img-top" style="height: 70%; width: 100%" alt="${val.title}">
-            <div class="card-body">
-                <h5 class="card-title">${val.title}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${val.author}</h6>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#books${i}">See more</button>
-            </div>
-        </div>
-
-        <div class="modal fade" id="books${i}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="title${i}" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="title${i}">${val.title}</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p class="text-muted">Genres: ${val.genres}</p>
-                            <p class="text-muted">${val.pages}</p>
-                            <p>${val.description}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success btnLink">
-                            <a href="${val.link}" target="blank" style="text-decoration: none; color: white">Go to website</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    `;
-    }
     i++;
-}
-
-// let newBookLink = document.getElementsByClassName("bookLink");
-// for (let i = 0; i < newBookLink.length; i++) {
-//     newBookLink[i].addEventListener("click", function() {
-//         document.getElementById("box2").innerHTML = `
-
-//         `;
-//     })
-// }
-
-{
-    /* <div class="card text-center">
-    //   <div class="card-header">
-    //  Genres: ${newBooks[i].genres}
-    //   </div>
-    //   <div class="card-body">
-    //     <h5 class="card-title"> ${newBooks[i].title} by ${newBooks[i].author}</h5>
-    //     <p class="card-text">${newBooks[i].description}</p>
-    //     <a href="${newBooks[i].link}" target="blank" class="btn btn-success">Go to website</a>
-    //   </div>
-    // </div>
-    //  */
 }
